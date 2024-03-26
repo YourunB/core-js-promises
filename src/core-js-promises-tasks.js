@@ -115,7 +115,7 @@ function getAllOrNothing(promises) {
  */
 function getAllResult(promises) {
   return Promise.all(
-    promises.map((v) => {
+    promises.map(async (v) => {
       return v.then((num) => num).catch(() => null);
     })
   );
